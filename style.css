@@ -1,0 +1,771 @@
+html {
+    scroll-behavior: smooth;
+}
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -999; /* এটি সবসময় সবার নিচে ব্যাকগ্রাউন্ডে একদম ফিক্সড থাকবে */
+    opacity: 0.5;  /* ভিডিওর স্পষ্টতা একটু বাড়িয়ে দিলাম যাতে সবসময় সুন্দর দেখায় */
+}
+
+body {
+    background-color: #0b132b !important;
+    background: transparent !important;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e0e1dd;
+}
+.marquee-container {
+    background: #1c2541;
+    border-top: 1px solid #3a506b;
+    border-bottom: 1px solid #3a506b;
+    padding: 15px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* লেখার ট্র্যাক যা অবিরাম ঘুরতে থাকবে */
+.marquee-track {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marqueeScroll 25s linear infinite;
+}
+
+/* লেখার স্টাইল */
+.marquee-track span {
+    color: #f39c12; /* গোল্ডেন কালার */
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 25px;
+    display: inline-block;
+}
+
+/* স্লাইড বা অ্যানিমেশনের মূল লজিক */
+@keyframes marqueeScroll {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+ {
+
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: transparent !important;
+    color: #e0e1dd;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #0b132b;
+    border-bottom: 1px solid #1c2541;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.navbar nav a {
+    color: #b7b7a4;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #ffffff;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #0b132b, #1c2541);
+    text-align: center;
+    padding: 100px 20px;
+    border-bottom: 1px solid #1c2541;
+}
+
+.profile-img {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 30%;
+    border: 3px solid #f39c12;
+    box-shadow: 0 0 20px rgba(243, 156, 18, 0.4);
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #8d99ae;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+/* Buttons */
+.btn-main {
+    background: linear-gradient(45deg, #e74c3c, #f39c12);
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+    transition: transform 0.2s;
+}
+
+.btn-main:hover {
+    transform: translateY(-2px);
+}
+
+/* Sections */
+section {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+/* About Section */
+.about-section {
+    background-color: #0b132b;
+
+}
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+
+.about-img-box img {
+    width: 800px;   
+    height: 550px;  
+    border-radius: 12px;
+    object-fit: cover;
+    border: 3px solid #3a506b;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+
+.about-text {
+    background: #1c2541;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #3a506b;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    flex: 1;
+}
+
+.about-text p {
+    color: #e0e1dd;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+.milestones {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.milestones li {
+    background: #1c2541;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    border-left: 3px solid #f39c12;
+}
+
+/* Skills Section */
+.skills-section {
+    background-color: #0b132b;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.skill-tag {
+    background-color: #1c2541;
+    color: #e0e1dd;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid #3a506b;
+}
+
+/* Projects Section */
+.projects-section {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+.projects-section h2 {
+    color: #0b132b;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    color: #0b132b;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.project-links {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-sm {
+    background-color: #e74c3c;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.btn-outline {
+    border: 1px solid #6c757d;
+    color: #333;
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    background-color: #1c2541;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background: #0b132b;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #3a506b;
+    text-align: left;
+}
+
+.testimonial-card p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    color: #b7b7a4;
+}
+
+.testimonial-card span {
+    font-size: 0.85rem;
+    color: #f39c12;
+}
+.contact-section {
+    padding: 60px 20px;
+    background-color: #0b132b;
+    text-align: center;
+}
+
+.contact-section h2 {
+    color: #e0e1dd;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    max-width: 900px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background: #1c2541;
+    border: 1px solid #3a506b;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #f39c12;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 250px;
+    background: #1c2541;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #3a506b;
+}
+
+.contact-info h3 {
+    color: #f39c12;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    color: #e0e1dd;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+/* Education Section Styles */
+.education-section {
+    padding: 80px 20px;
+    background-color: #0b132b;
+    text-align: center;
+}
+
+.education-section h2 {
+    color: #e0e1dd;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.education-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.education-card {
+    background: #1c2541;
+    padding: 35px;
+    border-radius: 14px;
+    border: 1px solid #3a506b;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    text-align: left;
+    width: 100%;
+}
+
+.education-card h3 {
+    color: #f39c12;
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+}
+
+.education-card .institution {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.education-card .details {
+    color: #b7b7a4;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.semester-badge {
+    background: rgba(243, 156, 18, 0.15);
+    border-left: 4px solid #f39c12;
+    padding: 12px 18px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.semester-badge span {
+    color: #f39c12;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.contact-info p a {
+    color: #f39c12;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.contact-info p a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+.project-card, .education-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover, .education-card:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 15px 30px rgba(243, 156, 18, 0.2); 
+}
+.btn-main, .btn-sm {
+    transition: all 0.3s ease;
+}
+
+.btn-main:hover, .btn-sm:hover {
+    transform: scale(1.05); 
+    opacity: 0.9;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-card, .education-card, .contact-wrapper {
+    animation: fadeInUp 0.8s ease-in-out;
+}
+
+@keyframes pageLoadAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+body {
+    animation: pageLoadAnimation 1.2s ease-out;
+}
+@keyframes floatEffect {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px); 
+    }
+    100% {
+        transform: translateY(0px); 
+    }
+}
+
+
+.hero-content {
+    animation: floatEffect 3s ease-in-out infinite;
+}
+.about-section {
+    transition: all 0.5s ease-in-out;
+}
+
+.about-container {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-img-box {
+    animation: floatEffect 4s ease-in-out infinite;
+}
+.certificate-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    width: 100%;
+}
+
+/* মেইন কার্ড: বামে লেখা, ডানে ছবি */
+.credential-card-horizontal {
+    background: linear-gradient(145deg, #1c2541, #0b132b);
+    color: #e0e1dd;
+    padding: 45px;
+    border-radius: 18px;
+    border: 1px solid #3a506b;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 45px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease;
+}
+
+.credential-card-horizontal:hover {
+    border-color: #f39c12;
+    box-shadow: 0 20px 45px rgba(243, 156, 18, 0.15);
+}
+
+/* বামপাশের লেখার স্টাইল (বড় ও স্পষ্ট) */
+.cert-info {
+    flex: 1.1;
+    text-align: left;
+}
+
+.cert-badge {
+    display: inline-block;
+    background-color: rgba(243, 156, 18, 0.15);
+    color: #f39c12;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    border: 1px solid rgba(243, 156, 18, 0.4);
+}
+
+.cert-info h3 {
+    color: #ffffff;
+    margin-bottom: 18px;
+    font-size: 2.4rem;
+    line-height: 1.2;
+}
+
+.cert-info p {
+    margin-bottom: 12px;
+    font-size: 1.25rem;
+    color: #e2e8f0;
+}
+
+.cert-info p strong {
+    color: #f39c12;
+}
+
+.cert-info .desc {
+    color: #cbd5e1;
+    margin-top: 18px;
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+/* ডানপাশের সার্টিফিকেট বক্স ও অ্যানিমেশন ইফেক্ট */
+.cert-img-container {
+    flex: 1.4;
+    background-color: #0b132b;
+    border-radius: 14px;
+    border: 2px solid #3a506b;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+/* মাউস নিলে (Hover) সার্টিফিকেট ভেসে উঠবে ও হালকা বাঁকবে */
+.cert-img-container:hover {
+    transform: scale(1.04) rotate(-1.5deg);
+    border-color: #f39c12;
+    box-shadow: 0 15px 30px rgba(243, 156, 18, 0.35);
+}
+
+/* ক্লিক করলে (Active) বাউন্স করে নড়ে উঠবে */
+.cert-img-container:active {
+    transform: scale(0.95) rotate(1.5deg);
+    transition: transform 0.1s ease;
+}
+
+.cert-img {
+    width: 100%;
+    height: auto;
+    max-height: 480px;
+    object-fit: contain;
+    border-radius: 8px;
+    display: block;
+}
+@keyframes floatAnimation {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); } /* উপর দিকে ১২ পিক্সেল ভাসবে */
+    100% { transform: translateY(0px); }
+}
+
+/* যে ছবির ওপর এই ইফেক্ট দিতে চাও সেখানে এটি জুড়ে দাও */
+.about-img-box, .hero-img {
+    animation: floatAnimation 4s ease-in-out infinite;
+}
+@keyframes borderGlow {
+    0% { border-color: #3a506b; }
+    50% { border-color: #f39c12; } /* বর্ডার গোল্ডেন রঙে চকচক করবে */
+    100% { border-color: #3a506b; }
+}
+
+.skill-card, .project-card {
+    animation: borderGlow 3s infinite;
+}
+/* পুরো বডিতে একটি প্রিমিয়াম লাইভ মোশন বা স্মুথ ফিল আনার জন্য */
+body {
+    animation: backgroundShift 15s ease infinite alternate;
+}
+
+/* ব্যাকগ্রাউন্ড কালার বা গ্রেডিয়েন্ট ধীরে ধীরে পরিবর্তন হয়ে ভিডিওর মতো লুক দেবে */
+@keyframes backgroundShift {
+    0% {
+        background-color: #0b132b;
+    }
+    50% {
+        background-color: #111a3a;
+    }
+    100% {
+        background-color: #0b132b;
+    }
+}
+
+/* সাইটের প্রতিটি সেকশনে এন্ট্রি ও লাইভ মোশন ইফেক্ট */
+section {
+    position: relative;
+    overflow: hidden;
+    animation: sectionFadeIn 1.2s ease-in-out;
+}
+
+@keyframes sectionFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* কার্ডগুলো সবসময় হালকা ভাসমান (Floating) অবস্থায় থাকবে যাতে ভিডিওর মতো মনে হয় */
+.credential-card, .credential-card-horizontal, .project-card, .skill-card {
+    animation: globalFloat 5s ease-in-out infinite;
+}
+
+@keyframes globalFloat {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -999;
+    opacity: 0.75;
+}
+section, .hero, .hero-section {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #060913;
+    color: #6c757d;
+    font-size: 0.85rem;
+}
